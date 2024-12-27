@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+           
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        header nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .hero {
+    background-color: #e7e9f0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-image: url("bgss.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 70vh; 
+    margin: 20px 0;
+    font-size: 2rem;
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+
+        .hero img {
+            max-width: 100%;
+            border-radius: 15px;
+        }
+
+        .hero h1 {
+            margin: 20px 0;
+            font-size: 2rem;
+        }
+
+        .products {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            margin: 15px 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .product p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .product button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Fish & Meat Store</div>
+    <nav>
+        <a href="home_page.html">Home</a>
+        <a href="Shopify/content/register.html">regirster</a>
+        <a href="#">About</a>
+        <a href="Shopify/content/contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Fish & Meat</h1>
+    <!-- <img src="bg.webp" alt="Featured Shoes"> -->
+</section>
+
+<section class="products">
+    <div class="product">
+        <img src="fish1.jpg" alt="fish1">
+        <h3>Mullet Fish</h3>
+        <p>$79.99</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="fish3.jpg" alt="fish3">
+        <h3>Tilapia Fish</h3>
+        <p>$89.99</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="meat1.jpg" alt="meat1">
+        <h3>Red meat</h3>
+        <p>$69.99</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="meatt.jpg" alt="meat2">
+        <h3>Minced meat</h3>
+        <p>$99.99</p>
+        <button>Add to Cart</button>
+    </div>
+</section>
+<section class="products">
+    <div class="product">
+        <img src="meat4.webp" alt="meat">
+        <h3>Sliced ​​meat</h3>
+        <p>$79.99</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="meat5.jpg" alt="fish3">
+        <h3>Meat</h3>
+        <p>$89.99</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="sardine.jpg" alt="sardine">
+        <h3>Sardine</h3>
+        <p>$69.99</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="ss.jpg" alt="fish">
+        <h3>Sea bream</h3>
+        <p>$99.99</p>
+        <button>Add to Cart</button>
+    </div>
+</section>
+</body>
+</html>
