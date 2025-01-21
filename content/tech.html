@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Shopify</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="shortcut icon" href="logooo.png" type="image/x-icon">
+
+<style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap');
+  /* the link of poppins font */
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  body{
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  h1{
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+  h2{
+    font-size: 1.9rem;
+    font-weight: 700;
+  }
+  h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  h4{
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  h5{
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  
+  
+  
+  .navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    font-size: 17px;
+    color: white;
+    z-index: 1000; /* Ensure the navbar appears above other elements */
+    background-color: #34383e!important;
+  
+    
+  }
+  .navbar-nav .nav-link {
+    color: white !important;  /* تحديد اللون الأبيض لجميع روابط التنقل */
+  }
+  .navbar-nav .nav-link:hover {
+    color: #416e8c !important;  /* تغيير اللون عند المرور على الرابط  */
+  }
+  .navbar img {
+    max-height: 80px;
+    object-fit: contain;
+    margin-right: 10px; /* Add spacing to avoid crowding */
+  }
+  
+  .collapse {
+    z-index: 1001; /* Ensure dropdowns or collapsed content appear above other elements */
+    
+  }
+  
+  
+  .navbar-light .navbar-nav .nav-link{
+    padding: 0 20px;
+    color: #D9EAFD;
+    transition: 0.3s ease;
+  }
+    
+  
+  
+  
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar i:hover,
+  .navbar-light .navbar-nav .nav-link.active
+  .navbar i.active
+  {
+      color:  #416e8c;
+      
+  
+  }
+  
+  
+  .navbar-light .navbar-toggler{
+    border: none;
+    outline: none;
+  }
+  
+  #bar{
+    font-size: 1.5rem;
+    padding: 7px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #D9EAFD;
+  }
+  
+  #bar:hover,
+  #bar.active{
+    color: #D9EAFD;
+  }
+  
+  
+  
+  #home span{
+  color:  #36537d;
+  }
+  
+  #home{
+    background-image: url("elec.jpg") !important;
+    width: 100%;
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  button{
+    font-size: 1rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color:  #50585c;
+    color: aliceblue;
+    border-radius: 1000px;
+    padding: 13px 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  button:hover{
+    background-color: #3e717c  ;
+  }
+  
+  
+  #newProduct .one img{
+    width: 100%;
+    height: 90%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  
+  }
+  
+  #newProduct .one .details{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.3s ease;
+  }
+  
+  #newProduct .one:hover .details{
+    cursor: pointer;
+    background-color: rgba(240, 255, 255, 0.326);
+  }
+  #newProduct .one .details button{
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    background: none;
+    text-transform: uppercase;
+    border-bottom:3px solid black ;
+    padding: 2.5px;
+    transform: translateY(70px);
+    transition: 0.3s ease;
+  
+  }
+  #newProduct .one .details button:hover{
+    color: white;
+    border-bottom:3px solid #fff ;
+  }
+  
+  #newProduct .one:nth-child(1) .details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    padding-left: 10px;
+  }
+  
+  #newProduct .one:nth-child(2) .details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  
+  #newProduct .one:nth-child(3) .details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+    padding-right: 10px;
+  
+  }
+  
+  .product{
+    cursor: pointer;
+    margin-bottom: 2rem;
+  
+  }
+  
+  .product img{
+    transition: 0.3s all;
+  }
+  
+  .product:hover img{
+    opacity: 0.7;
+  }
+  
+  .product .buy-btn{
+    background-color: #F5EFFF !important;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.3s all;
+    color: #2A3335;
+    outline: none;
+    border: none;
+  }
+  .product:hover .buy-btn{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  
+  .product img {
+    height: 200px; /* Adjust to desired height */
+    object-fit: cover;
+  }
+  
+  .star i{
+    font-size: 1rem;
+    color: #36537d;
+  
+  }
+  .star{
+    padding: 10px 0px;
+  }
+  
+  
+  /* footer section css  */
+  /* Footer Base Styles */
+  .footer {
+    background-color: #2A3335;
+    padding: 70px 0;
+    color: #D9EAFD;
+  }
+  
+  .containerF {
+    max-width: 1170px;
+    margin: auto;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-col {
+    width: 25%; /* Default width for larger screens */
+    padding: 0 15px;
+  }
+  
+  .footer-col h4 {
+    font-size: 20px;
+    color: #D9EAFD;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #356977e9;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  
+  .footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  
+  .footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #D9EAFD;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+  }
+  
+  .footer-col .socialLinks a {
+    display: inline-block;
+    background-color: #D9EAFD;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #2A3335;
+    transition: all 0.5s ease;
+  }
+  
+  .footer-col .socialLinks a:hover {
+    background-color: #ffffff;
+    color: #2A3335;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-col {
+      width: 100%; /* Full-width columns on smaller screens */
+      margin-bottom: 20px; /* Add spacing between columns */
+    }
+  
+    .socialLinks a {
+      margin-right: 10px;
+    }
+  }
+  
+  /* register section styling */
+  
+  #SignUpSec{
+    background-position: right;
+    background-size: cover;
+    min-height: 50vh;
+    background-image: url(/Shopify/img/pexels-pixabay-264512.jpg);
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .wrapper{
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width: max(50%, 600px);
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .wrapper h1{
+    font-size: 3rem;
+    font-weight: 750;
+  }
+  
+  .wrapper form{
+    width: min(400px, 100%);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .wrapper form > div{
+    width: 100%;
+    display: flex;
+    justify-content:center ;
+  }
+  
+  .wrapper form label{
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    background-color: #36537d ;
+    color: #fdfdfd;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wrapper form label svg{
+    fill: #fdfdff;
+  
+  }
+  
+  .wrapper form input{
+  
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    background-color: #efeef1;
+    transition:200ms ease ;
+  }
+  
+  .wrapper form input:hover{
+    border: 2px solid rgb(255, 236, 138);
+  }
+  
+  .wrapper form input:focus{
+    outline: none;
+    border-color: #2A3335;
+  }
+  
+  .wrapper div:has(input:focus) > label,.wrapper div:has(input:focus) > label svg {
+    background-color: #2A3335;
+    fill: white;
+    color: white;
+  }
+  
+  .wrapper form button{
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    background-color: #2A3335;
+  }
+  
+  .wrapper form button:hover{
+    background-color: #446082e3;
+  }
+  
+  .wrapper a{
+    text-decoration: none;
+    color: #A294F9;
+  }
+  .wrapper a:hover{
+    text-decoration: underline;
+  }
+  
+  
+  
+  #error-message{
+    color: #4e6677;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .wrapper {
+      min-height: auto;
+      width: 95%;
+    }
+  }
+  
+  /* styling of contact us page */
+  
+  #ContactSec {
+    background-color: #36537d;
+  }
+  
+  .wrapper {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .input-group label {
+    margin-right: 10px;
+    color: #6c757d;
+    font-size: 1.5rem;
+  }
+  
+  .input-group input,
+  .input-group textarea {
+    flex-grow: 1;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 5px;
+  }
+  
+  .input-group textarea {
+    resize: none;
+  }
+  
+  button.btn {
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #2A3335;
+    color: aliceblue;
+    border-radius: 1000px;
+    padding: 13px 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.btn:hover {
+    background-color: #5c88ae;
+  }
+  
+  @media (max-width: 768px) {
+    .wrapper {
+      width: 95%;
+    }
+  }
+  
+  .category .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap:2rem;
+  }
+  
+  .category .box-container .box{
+    text-align:center;
+  }
+  
+  .category .box-container .box:hover h3{
+    color: #4983a0;
+  }
+  .category .box-container .box img{
+    height:14rem;
+    margin-bottom:1rem;
+  }
+  
+  .category .box-container .box h3{
+    font-size:1.7rem;
+    color: #222;
+    font-weight: bold;
+  }
+  
+  .about {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem;
+  }
+  .about .img{
+    flex: 1 1 42rem;
+    padding-bottom: 5rem;
+    padding-right: 5rem;
+  }
+  .about .img img{
+    width: 100%;
+    box-shadow: 4rem 4rem 0 #eee;
+  }
+  .about .content{
+    flex: 1 1 42rem;
+  }
+  .about .content .box{
+    padding: 3rem;
+    background: #eee;
+  }
+  .about .content .box h3{
+    font-size:2.5rem;
+    color: #222;
+  }
+  .about .content .box p{
+    padding: 1rem 0;
+    line-height: 2;
+    color: #666;
+    font-size:1.4rem;
+  }
+  .about .content .icons-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .about .content .icons-container .icons{
+    flex: 1 1 16rem;
+    background: #eee;
+    padding:2rem;
+    text-align: center;
+  }
+  .about .content .icons-container .icons i{
+    color: #315c64;
+    margin-bottom: 1rem;
+    font-size: 5rem;
+  }
+  .about .content .icons-container .icons p{
+    font-size:1.4rem;
+    color: #666;
+  }
+  
+  .shop{
+    color: #eee;
+  }
+  .shop .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+    gap:2rem;
+  }
+  .shop .box-container .box{
+    text-align: center;
+    background: #fff;
+    border: 0.2rem solid #222;
+    box-shadow:0 0.5rem 1rem rgba(0,0,0,0.1);
+  }
+  .shop .box-container .box:hover .img img{
+    transform:scale(1.1);
+  }
+  .shop .box-container .box:hover .img .icons{
+    transform:translateX(0rem);
+  }
+  .shop .box-container .box .img{
+    position: relative;
+    overflow: hidden;
+  }
+  .shop .box-container .box .img img{
+    height:25rem;
+  }
+  .shop .box-container .box .img .icons{
+    position:absolute;
+    top: 1rem;
+    left: 2rem;
+    transform:translateX(-10rem);
+  }
+  .shop .box-container .box .img .icons a{
+    display:block;
+    height:5rem;
+    width:5rem;
+    line-height: 4.5rem;
+    font-size: 1.7rem;
+    color: #222;
+    border-radius: 0.2rem solid #222;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    margin-top:1rem;
+  }
+  .shop .box-container .box .img .icons a:hover{
+    color: #fff;
+    background:#14e9d7;
+  }
+  .shop .box-container .box .content{
+    padding:2rem;
+  }
+  .shop .box-container .box .content h3{
+    font-size:2rem;
+    color: #222;
+    padding-bottom: .5rem;
+    font-weight: normal;
+  }
+  .shop .box-container .box .content .price{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #F08080;
+  }
+  .shop .box-container .box .content .price span{
+    color: #666;
+    font-size:1.7rem;
+    text-decoration: line-through;
+  }
+  </style>
+</head>
+  <body>
+    <header>
+   <!-- navbar section -->
+   <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light">
+    <div class="container-fluid">
+      <img style="height: 70px;" src="logooo.png" alt="Logo">
+      <h3>Shopify</h3>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i id="bar" class="fa-solid fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="shop.html">Shop</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="register.html">Register</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+        </ul>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+  </nav>
+   
+
+    </section>
+    <section class="mb-5" id="home">
+      <div class="mx-4">
+        <h5 class="pt-5 mx-4"></h5>
+        <h1 class="mx-4"><span>Best Prices </span>This Year</h1>
+        <p style="color: white; font-size: 30px; " class="mx-4">
+          "Technology is the hearbeat of the modern life. explore innovative solutions that empower your creativity."</p>
+        <button class="mx-4">Shop Now!</button>
+      </div>
+    </section>
+    
+    <section class="category ">
+         <div class="box-container align-items-center">
+       
+               <a href="motors.html" class="box">
+                   <img src="motors.jpg" alt="motors of Image">
+                   <h3>Motors</h3>
+               </a>
+       
+               <a href="tools.html" class="box">
+                   <img decoding="async" src="tools.png">
+                   <h3>tools</h3>
+               </a>
+       
+               <a href="batteries.html" class="box">
+                   <img decoding="async" src="batteries.png">
+                   <h3>Batteries</h3>
+               </a>
+       
+               <a href="sensors.html" class="box">
+                   <img decoding="async" src="sensors.jpg">
+                   <h3>sensors</h3>
+               </a>
+               
+       
+               <a href="/Shopify/Extension/knife.html" class="box">
+                   <img decoding="async" src="wirs&cables.png">
+                   <h3>Wirs&Cables</h3>
+               </a>
+       
+               <a href="/Shopify/Extension/cups.html" class="box">
+                   <img decoding="async" src="control.jpg">
+                   <h3>Control</h3>
+               </a>
+
+               
+               <a href="/Shopify/Extension/cups.html" class="box">
+                <img decoding="async" src="boards.jpeg">
+                <h3>Boards</h3>
+                        
+               <a href="/Shopify/Extension/utinsile.html" class="box">
+                <img decoding="async" src="integrated circuit.webp">
+                <h3>Integrated Circuit</h3>
+            </a>
+           </div>
+
+       </div>
+
+    </body>
+    
+   
+   
+   
+   
+<!-- footer -->
+<div style="margin-top: 10px;">
+  <footer class="footer mt-5 py-3">
+    <div class="containerF mx-auto pt-5">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Team</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Get Help</h4>
+          <ul>
+            <li><a href="Shopify/content/FAQ.html">FAQ</a></li>
+            <li><a href="#">Returning</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Payment Methods</a></li>
+            
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="home_page.html">Best Seller</a></li>
+            <li><a href="Kitchen\final.html">Kitchen</a></li>
+            <li><a href="Clothes page\Clothes page\clothes.html">Clothing</a></li>
+            <li><a href="#">Shoes</a></li>
+            <li><a href="electrical appliancess page\electrical appliancess page\html.html">Electronic Devices</a></li>
+            <li><a href="website/fish&meat_page.html">fish and meat</a></li>
+            
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="socialLinks">
+            <a href="#"> <i class="fab fa-facebook-f"></i></a>
+            <a href="#"> <i class="fab fa-instagram"></i></a>
+            <a href="#"> <i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
